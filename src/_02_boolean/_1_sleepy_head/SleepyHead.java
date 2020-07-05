@@ -1,5 +1,7 @@
 package _02_boolean._1_sleepy_head;
 
+import java.awt.Color;
+
 import javax.swing.JOptionPane;
 import org.jointheleague.graphical.robot.Robot;
 
@@ -39,14 +41,17 @@ String score = JOptionPane.showInputDialog(null, "What was your test score?");
 		// If they scored more than 70, they passed the exam.
 		// Set the boolean passedExam based on their score.
 double test = Double.parseDouble(score);
-if (score >= 70) {
+if (test >= 70) {
 	JOptionPane.showMessageDialog(null, "congrats, you passed the test");
+	
 }
 		// If the user passed the exam, congratulate them
 		
 		// otherwise, wish them better luck next time.
 		
-		
+else {
+	JOptionPane.showMessageDialog(null, "better luck next time");
+}
 		/************************  GAME OVER  **************************/
 
 		boolean gameIsOver = false;
@@ -67,17 +72,25 @@ if (score >= 70) {
 		
 		boolean isRed;
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
+		isRed = false;
 		
+		String color = JOptionPane.showInputDialog("what color do you want to draw with?");
+		if (color.equalsIgnoreCase("red"))
+			isRed = true;
+		boolean isSquare = false;		
 		
-		boolean isSquare;		
-		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
-		
-		
+// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
+		String shape = JOptionPane.showInputDialog("what shape do you want to draw?");
+		if(shape.equalsIgnoreCase("square"))
+			isSquare = true;
 		// Now you MUST use the && operator to join the booleans for this code. 
 		// Ask your teacher if you are not sure how
 		// Use an if statement to ONLY draw a red square when it has been requested (use the method below)
 		// otherwise, tell the user you don't know how to draw that shape
+		if (isRed && isSquare) {
+		drawRedSquare()	;
 		
+		}
 
 	}
 
@@ -85,5 +98,16 @@ if (score >= 70) {
 	static void drawRedSquare() {
 		Robot rob = new Robot();
 		// Complete the rest of this method
+		rob.penDown();
+		rob.setPenColor(Color.RED);
+		rob.setSpeed(100);
+		rob.move(100);
+		rob.turn(90);
+		rob.move(100);
+		rob.turn(90);
+		rob.move(100);
+		rob.turn(90);
+		rob.move(100);
 	}	
+	
 }
