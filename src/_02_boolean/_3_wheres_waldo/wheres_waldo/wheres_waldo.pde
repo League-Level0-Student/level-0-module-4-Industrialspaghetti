@@ -8,7 +8,7 @@ AudioSample woohoo;
 void setup() {
   
   //Find a Where's Waldo picture and drop it into this sketch.     
-  PImage waldo = loadImage("waldo.jpg"); // Change this to match your file name.
+  PImage waldo = loadImage("jV4ghYR.jpg"); // Change this to match your file name.
   size(500, 500); // Change this to match the size of your waldo picture
   image(waldo, 0, 0);
 
