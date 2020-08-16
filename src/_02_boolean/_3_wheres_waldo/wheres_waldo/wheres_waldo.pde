@@ -8,8 +8,8 @@ AudioSample woohoo;
 void setup() {
   
   //Find a Where's Waldo picture and drop it into this sketch.     
-  PImage waldo = loadImage("jV4ghYR.jpg"); // Change this to match your file name.
-  size(500, 500); // Change this to match the size of your waldo picture
+  PImage waldo = loadImage("jV4ghYR.jpeg"); // Change this to match your file name.
+  size(900, 900); // Change this to match the size of your waldo picture
   image(waldo, 0, 0);
 
   /*
@@ -21,11 +21,18 @@ void setup() {
 void draw() {
       // Use this print statement to find out the coordinates of Waldo when you press the mouse
       // println("X: " + mouseX + " Y: " + mouseY); 
-
+//println("X: " + mouseX + " Y: " + mouseY);
       // If the mouse is on Waldo, print “Waldo found!”
-
+ if (mousePressed == true){
+   println("X; "+ mouseX); println("Y; "+ mouseY);
+    if (mouseY > 264 && mouseY < 314 && mouseX > 491 && mouseX < 525){
+   
+     print("You found Waldo!");
+     //x=491 X=525 y=264 Y=314
+   }
+ }
 /**********  Now to add the sounds. You will need to uncomment all the code and import the Minim library ********/
-
+//waldo location: X:507 Y:274
       // If Waldo is found, also use a method below to play “Woohoo”
       // Change the name of the sound file if you need to 
       

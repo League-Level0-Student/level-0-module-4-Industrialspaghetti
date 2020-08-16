@@ -1,5 +1,7 @@
 package _03_char._3_pi_aloud;
+public static void main(String[] args) throws Exception {
 
+}
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -47,5 +49,6 @@ public class PiAloud {
 	}
 
 }
+
 
 

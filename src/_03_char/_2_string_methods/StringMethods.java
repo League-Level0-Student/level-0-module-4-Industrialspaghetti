@@ -5,10 +5,15 @@ public class StringMethods {
 	public static void main(String[] args) {
 		
 		// 1. Create a String variable and initialize it to contain a minimum of 3 characters
-
+String cat = "cat";
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
-
+for(int i = 0; i < 1; i++) {
+	for(int j = 0; j < 20; j++) {
+		System.out.print("cat");
+	}
+	
+}
 		
 		// 3. Print the length of your String to the console.
 		//    HINT: .length()
